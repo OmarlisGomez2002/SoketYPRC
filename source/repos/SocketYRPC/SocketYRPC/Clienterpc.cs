@@ -55,11 +55,7 @@ public class ClienteRPC
 
             // ── 2. Realizar la llamada HTTP POST ──────────────
             // En RPC real, esto lo hace el STUB automáticamente
-            StringContent contenidoHttp = new StringContent(
-                jsonSolicitud,
-                Encoding.UTF8,
-                TIPO_CONTENIDO
-            );
+            StringContent contenidoHttp = new StringContent(jsonSolicitud, Encoding.UTF8,TIPO_CONTENIDO);
 
             HttpResponseMessage respuestaHttp =
                 await clienteHttp.PostAsync(URL_SERVIDOR, contenidoHttp);
